@@ -1,0 +1,107 @@
+*** INSERT INTO queries, som gemmer 3 nye opskrifter i databasen
+
+
+INSERT INTO opskrifter (name, method, photo)
+
+VALUES ('Fastelavnsboller med hindbærskum',
+
+'Hindbærskum
+Læg husblas i blød i koldt vand i ca. 5 min.
+Bring hindbær, vand, sukker og vaniljesukker i kog i en lille tykbundet gryde. Kog det under omrøring i ca. 5 min.
+Træk husblassen op ad vandet med det vand der hænger ved. Smelt det i hindbærblandingen. Hæld blandingen i en skål og lad den køle af i køleskabet i ca. 1 time.
+Pisk fløden til let skum og vend den kolde hindbærblanding i. Stil hindbærskummet tildækket i køleskabet indtil brug - gerne i en sprøjtepose.
+Vandbakkelser
+Bring vand og smør i kog i en gryde. Kom sukker og mel i på en gang og rør dejen godt sammen med en grydeske.
+Varm dejen godt igennem, til den slipper gryde og ske. Kom dejen i en røreskål og afkøl den lidt.
+Tilsæt de sammenpiskede æg lidt efter lidt under omrøring. Tilsæt evt. resten af æggeblandingen - dejen skal kunne formes til små toppe.
+Sæt med 2 spiseskeer eller med sprøjtepose 12 små toppe (ca. 6 cm i diameter) på en plade med bagepapir.
+Bag vandbakkelserne midt i ovnen, til de er hævede og gyldne. Luk ikke ovndøren op de første 10 min. af bagetiden, da vandbakkelserne let falder sammen.
+Tag en vandbakkelse ud efter endt bagetid og kontroller at den ikke falder sammen. Lad vandbakkelserne køle af på en bagerist i ca. ½ time.
+Glasur
+Bland flormelis og vand til en blank glasur.
+Flæk vandbakkelserne og fyld dem med hindbærskum - gem lidt til pynt. Pynt med glasur, hindbærskum og frysetørrede hindbær.
+Bagetid
+Ca. 25 min. ved 200° - traditionel ovn.',
+
+'fastelavnsboller.png')
+
+
+('Banankage',
+
+'Pisk æg, sukker og vaniljesukker til en luftig æggesnaps.
+Bland mel og bagepulver og vend det forsigtigt i dejen skiftevis med smørret. Vend de mosede bananer i.
+Hæld dejen i en smurt franskbrødsform (ca. 1 liter) og bag kagen nederst i ovnen.
+Vend banankagen ud på en bagerist og lad den køle af.
+Overtræk
+Tag kagen ud af formen og placer den, med undersiden opad, på et fad.
+Fordel den smeltede chokolade på kagen, pynt med valnødder og server.
+Bagetid
+Ca. 55 min. ved 175° - traditionel ovn.'
+
+,'banankage.png')
+
+('Pandekager',
+
+'Kom melet i en skål og pisk mælken i lidt efter lidt til en "klumpfri" jævning.
+Smelt smørret i en stegepande og kom det i blandingen.
+Tilsæt æg og salt, pisk dejen godt igennem og lad den hvile i ca. ½ time.
+Bag en pandekage ad gangen (½-¾ dl dej pr. pandekage) ved kraftig varme, ca. 1 min. på hver side, eller til de er gyldne.
+Hold pandekagerne varme under alufolie og gentag med resten af dejen.
+Server de lune pandekager med flødeskum og syltetøj eller friske bær. Pynt evt. med spiselige blomster.'
+
+,'pandekager.pgn')
+
+
+
+*** INSERT INTO queries, som gemmer 5 nye ingredienser i databasen
+
+INSERT INTO ingredienser(navn,"kalorier pr. 100 g.")
+
+VALUES ('Banan',118),
+      ('Hindbær',223),
+      ('Kokos',38),
+      ('Ost',382),
+      ('Nødder',216)
+ 
+
+
+
+*** SELECT query, som viser indholdet af ingrediens-tabellen i ABC-rækkefølge
+
+SELECT navn, "kalorier pr. 100 g." 
+FROM ingredienser 
+ORDER BY navn ASC
+
+
+
+ 
+*** UPDATE query, som opdaterer navnet af en opskrift
+
+UPDATE opskrifter
+SET name = 'Pancakes'
+WHERE id = '8'
+
+
+
+
+ 
+*** DELETE query, som sletter en opskrift
+DELETE FROM opskrifter
+WHERE id = 1;
+
+
+
+
+*** SELECT query, som viser indholdet af opskrifts-tabellen i ABC-rækkefølge
+SELECT name, method, photo
+FROM opskrifter
+ORDER BY name ASC
+
+
+
+
+
+*** SELECT query, som viser indholdet af ingrediens-tabellen i faldende næringsindholds rækkefølge
+SELECT navn, "kalorier pr. 100 g."
+FROM ingredienser
+ORDER BY "kalorier pr. 100 g." DESC
