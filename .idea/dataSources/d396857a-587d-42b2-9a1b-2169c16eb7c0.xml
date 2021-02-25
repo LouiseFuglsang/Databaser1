@@ -15,7 +15,7 @@
     <table id="8" parent="2" name="sqlite_master">
       <System>1</System>
     </table>
-    <column id="9" parent="6" name="Id">
+    <column id="9" parent="6" name="KunderId">
       <Position>1</Position>
       <DataType>int|0s</DataType>
     </column>
@@ -35,22 +35,22 @@
       <Position>5</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="14" parent="6" name="Reg.dato">
+    <column id="14" parent="6" name="Registreringsdato">
       <Position>6</Position>
       <DataType>text|0s</DataType>
     </column>
     <index id="15" parent="6" name="sqlite_autoindex_Kunder_1">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>Id</ColNames>
+      <ColNames>KunderId</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="16" parent="6" name="table_name_pk">
-      <ColNames>Id</ColNames>
+      <ColNames>KunderId</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_Kunder_1</UnderlyingIndexName>
     </key>
-    <column id="17" parent="7" name="Id">
+    <column id="17" parent="7" name="OverførslerId">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
     </column>
@@ -70,7 +70,7 @@
       <Position>5</Position>
       <DataType>double|0s</DataType>
     </column>
-    <column id="22" parent="7" name="Id Kunde">
+    <column id="22" parent="7" name="KunderId">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
     </column>
