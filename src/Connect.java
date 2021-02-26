@@ -9,7 +9,7 @@ public class Connect {
     public static void connect() {
         Connection conn = null;
         try {
-            String url = "jdbc:sqlite:C:/Users/Louise/IdeaProjects/Databaser1/db/Mobilepay";
+            String url = "jdbc:sqlite:db/Mobilepay\n";
             conn = DriverManager.getConnection(url);
 
             System.out.println("Connection to SQLite has been established.");
