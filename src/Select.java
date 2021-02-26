@@ -7,7 +7,6 @@ import java.sql.Statement;
 
 public class Select {
 
-
     private Connection connect() {
         // SQLite connection string
         String url = "jdbc:sqlite:db/Mobilepay";
@@ -19,7 +18,6 @@ public class Select {
         }
         return conn;
     }
-
 
     public void selectKunder() {
         String kunder = "SELECT KunderId, Navn, Telefon, Adresse, Kortnumre, Registreringsdato FROM Kunder";
@@ -43,7 +41,6 @@ public class Select {
             System.out.println(e.getMessage());
         }
     }
-
 
     public void selectOverfoersler() {
         String overfoersler = "SELECT OverførslerId, KunderId, Dato, Beløb FROM Overførsler JOIN Kunder USING(KunderId)";
