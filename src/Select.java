@@ -10,7 +10,7 @@ public class Select {
 
     private Connection connect() {
         // SQLite connection string
-        String url = "jdbc:sqlite:C:/Users/Louise/IdeaProjects/Databaser1/db/Mobilepay";
+        String url = "jdbc:sqlite:db/Mobilepay";
         Connection conn = null;
         try {
             conn = DriverManager.getConnection(url);
